@@ -5,8 +5,19 @@ public class DecoData {
     private static int staticValue;
 
     public static void staticCall() {
+//        instanceValue++; // 인스턴수 변수 접근 불가
+//        instanceMethod(); // 인스턴수 메서드 접근 불가
+
         staticValue++; // 정적 변수 접근
         staticMethod(); // 정적 메서드 접근
+    }
+
+    public void instanceCall() {
+        instanceValue++;
+        instanceMethod();
+
+        staticValue++;
+        staticMethod();
     }
 
     private void instanceMethod() {
